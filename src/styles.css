@@ -3,3 +3,10 @@ h1 {
   font-family: "Vollkorn";
   font-weight: 600;
 }
+footer {
+  font-family: "Vollkorn";
+  font-size: 16px;
+}
+footer a {
+  color: gray;
+}
