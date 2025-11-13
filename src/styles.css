@@ -1,12 +1,90 @@
-h1 {
+body {
+  font-family: "Lexend", serif;
+  background-color: #b5a794;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/camel.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 40px;
+  text-align: center;
+  color: white;
+}
+
+header h1 h2 h3 {
+  margin: 0;
+}
+
+header h1 {
   font-size: 48px;
-  font-family: "Vollkorn";
   font-weight: 600;
 }
-footer {
-  font-family: "Vollkorn";
+
+header h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+header h3 {
+  font-size: 16px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+header a {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 12px 32px;
+  margin-top: 40px;
   font-size: 16px;
 }
+
+header a:hover {
+  background-color: #b5a794;
+  color: black;
+  transition: 300ms all ease-in-out;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 footer a {
-  color: gray;
+  color: #5f584d;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 180px 40px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(../images/camel.jpg);
+  }
+  header h1 {
+    font-size: 32px;
+  }
+  header h2 {
+    font-size: 20px;
+  }
+  header h3 {
+    font-size: 16px;
+  }
+  header a {
+    font-size: 14px;
+    margin-top: 12px;
+    padding: 16px 20px;
+  }
+  footer {
+    font-size: 12px;
+  }
 }
