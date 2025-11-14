@@ -8,9 +8,15 @@ body {
   margin: 0 auto;
 }
 
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 80px;
+}
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../images/camel.jpg);
+    url(../images/skyline.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 200px 40px;
@@ -28,24 +34,28 @@ header h1 {
 }
 
 header h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 400;
+  font-family: "Vollkorn";
+  font-style: italic;
 }
 
 header h3 {
-  font-size: 16px;
-  letter-spacing: 4px;
+  font-size: 20px;
+  letter-spacing: 6px;
   font-weight: 600;
 }
 
 header a {
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 12px 32px;
   display: inline-block;
   background-color: white;
   color: black;
-  text-decoration: none;
-  padding: 12px 32px;
-  margin-top: 40px;
-  font-size: 16px;
 }
 
 header a:hover {
@@ -55,20 +65,43 @@ header a:hover {
 }
 
 footer {
-  margin-top: 40px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/dunes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: top;
   font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 40px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+footer h4 {
+  color: white;
+  font-size: 18px;
   font-weight: 400;
 }
 
 footer a {
-  color: #5f584d;
+  color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 960px) {
   header {
-    padding: 180px 40px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(../images/camel.jpg);
+    padding: 120px 40px;
   }
   header h1 {
     font-size: 32px;
@@ -86,5 +119,19 @@ footer a {
   }
   footer {
     font-size: 12px;
+    padding: 20px 20px;
+  }
+
+  footer h4 {
+    margin-bottom: 8px;
+  }
+
+  footer p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
