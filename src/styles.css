@@ -21,6 +21,7 @@ section.secondary {
 .grid {
   display: grid;
   gap: 40px;
+  margin-top: 20px;
 }
 
 .grid-2-columns {
@@ -41,11 +42,32 @@ section.secondary {
 
 .card {
   background-color: white;
-  margin-top: 40px;
 }
 
 .card-header {
   padding: 0;
+}
+
+.card-header.grid {
+  gap: 0px;
+}
+
+.card img {
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.embed {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.youtube {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  height: auto;
 }
 
 .card-body {
@@ -127,21 +149,14 @@ main {
 }
 
 main img {
-  margin: 0 auto;
   max-width: 100%;
-}
-
-.card img {
-  height: auto;
-  width: 100%;
-  aspect-ratio: 3 / 2;
 }
 
 main h2 {
   font-family: "Vollkorn";
   font-size: 36px;
-  margin: 0;
   line-height: 1.25;
+  margin: 0;
 }
 
 main h3 {
@@ -208,7 +223,6 @@ footer a {
     grid-template-columns: 1fr;
     gap: 12px;
   }
-
   header {
     padding: 120px 40px;
   }
@@ -235,6 +249,12 @@ footer a {
   }
   main p {
     font-size: 14px;
+  }
+  .card img {
+    display: none;
+  }
+  .embed {
+    aspect-ratio: 16 / 9;
   }
   footer {
     font-size: 12px;
