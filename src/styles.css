@@ -1,97 +1,11 @@
 body {
   font-family: "Lexend", serif;
-  background-color: #b5a794;
-}
-
-section {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 100px 100px;
-}
-
-section.secondary {
-  background-color: aliceblue;
+  background-color: #dfd3c3;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.grid {
-  display: grid;
-  gap: 40px;
-  margin-top: 20px;
-}
-
-.grid-2-columns {
-  grid-template-columns: 1fr 1fr;
-}
-
-.grid-3-columns {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.grid-3-columns-first-narrow {
-  grid-template-columns: 1fr 2fr 2fr;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.card {
-  background-color: white;
-}
-
-.card-header {
-  padding: 0;
-}
-
-.card-header.grid {
-  gap: 0px;
-}
-
-.card img {
-  aspect-ratio: 1 / 1;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.embed {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-}
-
-.youtube {
-  aspect-ratio: 9 / 16;
-  width: 100%;
-  height: auto;
-}
-
-.card-body {
-  padding: 24px 24px 0px 24px;
-}
-
-.card-footer {
-  padding: 24px;
-}
-
-.button-tertiary {
-  background-color: #d7cec1;
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 12px;
-  display: block;
-}
-
-.button-tertiary:hover {
-  background-color: black;
-  color: #b5a794;
-  transition: 300ms all ease-in-out;
 }
 
 header {
@@ -139,7 +53,7 @@ header a {
 }
 
 header a:hover {
-  background-color: #b5a794;
+  background-color: #c7b198;
   color: black;
   transition: 300ms all ease-in-out;
 }
@@ -186,6 +100,74 @@ main p {
   font-size: 14px;
 }
 
+section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px 100px;
+}
+
+section.secondary {
+  background-color: #dfd3c3;
+}
+
+section.secondary h2 {
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: white;
+}
+
+.card-header {
+  padding: 0;
+}
+
+.card img {
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-header.grid {
+  gap: 0px;
+}
+
+.card-body {
+  padding: 24px 24px 0px 24px;
+}
+
+.card-footer {
+  padding: 24px;
+}
+
+.button-tertiary {
+  background-color: #c7b198;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 12px;
+  display: block;
+}
+
+.button-tertiary:hover {
+  background-color: black;
+  color: #c7b198;
+  transition: 300ms all ease-in-out;
+}
+
+.embed {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.youtube {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  height: auto;
+}
+
 footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/dunes.jpg");
@@ -195,7 +177,7 @@ footer {
   background-position: top;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
+  color: #dfd3c3;
 }
 
 footer ul {
@@ -215,13 +197,35 @@ footer a {
   color: white;
 }
 
+.grid {
+  display: grid;
+  gap: 40px;
+}
+
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 40px;
+}
+
+.grid-3-columns-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.text-center {
+  text-align: center;
+}
+
 @media (max-width: 960px) {
   section {
     padding: 40px 40px;
   }
   .grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 40px;
   }
   header {
     padding: 120px 40px;
