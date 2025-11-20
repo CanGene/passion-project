@@ -1,6 +1,12 @@
+/* -----------------------------------------
+   Base Styles
+------------------------------------------ */
+
 body {
-  font-family: "Lexend", serif;
-  background-color: #dfd3c3;
+  background-color: #00151b;
+  font-family: "Readex Pro", sans-serif;
+  line-height: 1.2;
+  color: #00151b;
 }
 
 .container {
@@ -8,29 +14,39 @@ body {
   margin: 0 auto;
 }
 
-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../images/sunset.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 200px 40px;
-  text-align: center;
-  color: white;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-header h1 h2 h3 {
+/* -----------------------------------------
+   Header
+------------------------------------------ */
+
+header {
+  padding: 200px 40px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("../images/boat.jpg") center/cover no-repeat;
+}
+
+header h1,
+header h2,
+header h3 {
   margin: 0;
 }
 
 header h1 {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 600;
+  line-height: 2;
 }
 
 header h2 {
   font-size: 28px;
   font-weight: 400;
-  font-family: "Vollkorn";
+  font-family: "Vollkorn", serif;
   font-style: italic;
 }
 
@@ -38,46 +54,49 @@ header h3 {
   font-size: 20px;
   letter-spacing: 6px;
   font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 header a {
-  text-decoration: none;
-  margin-top: 20px;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 12px 32px;
   display: inline-block;
-  background-color: white;
-  color: black;
+  margin-top: 40px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #dfd3c3;
+  color: #00151b;
+  transition: all 300ms ease-in-out;
 }
 
 header a:hover {
-  background-color: #c7b198;
-  color: black;
-  transition: 300ms all ease-in-out;
+  background-color: #00151b;
+  color: #dfd3c3;
 }
+
+/* -----------------------------------------
+   Main Content
+------------------------------------------ */
 
 main {
-  background-color: white;
-}
-
-main img {
-  max-width: 100%;
+  background-color: #f2f3ee;
 }
 
 main h2 {
-  font-family: "Vollkorn";
+  font-family: "Vollkorn", serif;
   font-size: 36px;
   line-height: 1.25;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 main h3 {
   font-size: 24px;
-  letter-spacing: 6px;
   font-weight: 600;
-  margin: 20px 0 0 0;
+  letter-spacing: 6px;
+  margin: 20px 0 0;
   line-height: 2;
   text-transform: uppercase;
   opacity: 0.3;
@@ -89,30 +108,63 @@ main h4 {
 }
 
 main h5 {
+  font-size: 16px;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 14px;
   margin: 0;
   line-height: 1.5;
 }
 
 main p {
+  font-size: 16px;
   font-weight: 400;
-  font-size: 14px;
 }
+
+/* -----------------------------------------
+   Sections
+------------------------------------------ */
 
 section {
   max-width: 100%;
+  padding: 80px 100px;
   margin: 0 auto;
-  padding: 100px 100px;
 }
 
 section.secondary {
-  background-color: #dfd3c3;
+  background-color: #f2f3ee;
 }
 
 section.secondary h2 {
   margin-bottom: 40px;
 }
+
+/* -----------------------------------------
+   Quick Facts Table
+------------------------------------------ */
+
+.facts-table {
+  background-color: #e8e5dc;
+}
+
+.quick-facts {
+  width: 100%;
+  margin-top: 40px;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 16px;
+  text-align: left;
+}
+
+.quick-facts th,
+.quick-facts td {
+  padding: 12px;
+  border-bottom: 1px solid #c7b198;
+}
+
+/* -----------------------------------------
+   Cards
+------------------------------------------ */
 
 .card {
   background-color: white;
@@ -122,19 +174,17 @@ section.secondary h2 {
   padding: 0;
 }
 
+.card-header.grid {
+  gap: 0;
+}
+
 .card img {
   aspect-ratio: 1 / 1;
-  max-width: 100%;
-  height: auto;
   object-fit: cover;
 }
 
-.card-header.grid {
-  gap: 0px;
-}
-
 .card-body {
-  padding: 24px 24px 0px 24px;
+  padding: 24px 24px 0;
 }
 
 .card-footer {
@@ -142,42 +192,58 @@ section.secondary h2 {
 }
 
 .button-tertiary {
-  background-color: #c7b198;
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 12px;
   display: block;
+  padding: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #dfd3c3;
+  color: #00151b;
+  transition: all 300ms ease-in-out;
+  font-weight: 600;
 }
 
 .button-tertiary:hover {
-  background-color: black;
-  color: #c7b198;
-  transition: 300ms all ease-in-out;
+  background-color: #00151b;
+  color: #dfd3c3;
 }
+
+/* -----------------------------------------
+   Media Embeds
+------------------------------------------ */
 
 .embed {
   width: 100%;
   aspect-ratio: 1 / 1;
 }
 
-.youtube {
-  aspect-ratio: 9 / 16;
-  width: 100%;
-  height: auto;
+.gallery {
+  background-color: #e8e5dc;
 }
 
+.youtube {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+}
+
+/* -----------------------------------------
+   Footer
+------------------------------------------ */
+
 footer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../images/dunes.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-position: top;
-  font-size: 14px;
+  padding: 40px 0;
+  font-size: 12px;
   font-weight: 400;
-  color: #dfd3c3;
+  color: #f2f3ee;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/dunes.jpg") top/cover no-repeat;
+}
+
+footer h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #f2f3ee;
+  margin: 0 0 8px;
 }
 
 footer ul {
@@ -187,15 +253,22 @@ footer ul {
   line-height: 1.5;
 }
 
-footer h4 {
-  color: white;
-  font-size: 18px;
-  font-weight: 400;
+footer a {
+  color: #dfd3c3;
 }
 
-footer a {
-  color: white;
+footer a:hover {
+  color: #f2f3ee;
+  transition: 300ms all ease-out;
 }
+
+footer p {
+  margin-top: 40px;
+}
+
+/* -----------------------------------------
+   Grid Utilities
+------------------------------------------ */
 
 .grid {
   display: grid;
@@ -203,11 +276,11 @@ footer a {
 }
 
 .grid-2-columns {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-3-columns {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 40px;
 }
 
@@ -219,56 +292,80 @@ footer a {
   text-align: center;
 }
 
+/* -----------------------------------------
+   Responsive
+------------------------------------------ */
+
 @media (max-width: 960px) {
   section {
-    padding: 40px 40px;
+    padding: 40px;
   }
+
   .grid {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
+
   header {
     padding: 120px 40px;
   }
+
   header h1 {
     font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 1.2;
   }
+
   header h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
+
   header h3 {
-    font-size: 16px;
-  }
-  header a {
     font-size: 14px;
-    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  header a {
+    margin-top: 40px;
+    font-size: 14px;
     padding: 16px 20px;
   }
+
   main h2 {
     font-size: 32px;
     margin-top: 6px;
   }
+
   main h3 {
     font-size: 16px;
   }
+
   main p {
     font-size: 14px;
   }
+
+  .quick-facts {
+    font-size: 14px;
+  }
+
   .card img {
     display: none;
   }
+
   .embed {
     aspect-ratio: 16 / 9;
   }
+
   footer {
-    font-size: 12px;
     padding: 20px;
+    font-size: 12px;
   }
+
   footer h4 {
     margin-bottom: 8px;
   }
+
   footer p {
-    margin: 0;
-    line-height: 1.5;
+    margin-top: 40px;
   }
 }
